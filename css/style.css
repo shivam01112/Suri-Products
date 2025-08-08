@@ -5310,7 +5310,7 @@ img.nwsImg
 }
 
 .header7 .hdr-top-bar{
-      border-bottom: 2px dashed #29166f;
+      border-bottom: 3px dashed #dcb426;
     background: #29166f;
 }
 header.header4.header7{
@@ -5390,7 +5390,7 @@ header.header7 #main-navigation-wrapper.navbar-default.sticky_header .nav > li{
      background: #011327;
 }
 .home7Banner .slide-1{
-     background: url(../images/home7-images/slider-bg.png) no-repeat center center;
+     background: url(../imgs/banner-bg.jpg) no-repeat center center;
      background-size:cover;
 }
 .home7Banner h4{
@@ -5622,7 +5622,7 @@ header.header7 #main-navigation-wrapper.navbar-default.sticky_header .nav > li{
 }
 .home7Services .home7Title h3{
     font-weight: bold;
-    color: #29166f;
+    color: #fff;
     margin-bottom: 10px;
     font-size: 18px;
     line-height: normal;
@@ -5884,7 +5884,7 @@ header.header7 #main-navigation-wrapper.navbar-default.sticky_header .nav > li{
     position:relative;
 }
 .demo3SingleTeam:hover .demo3TeamTitle h3{ 
-    color: #011327 
+    color: #fff
 }
 .demo3SingleTeam:hover .demo3TeamTitle p{ 
     color: #fff; 
@@ -11129,4 +11129,9 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 ;
     align-items: center;
     justify-content: space-between;
+}
+
+.slick-slide img {
+    display: block;
+    width: 100%;
 }
