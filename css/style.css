@@ -708,6 +708,7 @@ ul.header-info li.address{
      float:left;
      background:#f2f2f2;
      padding:3px 0px;
+     padding-left: 4%;
 }
  .hdr-top-bar ul.header-info li{
      padding:0px 20px;
@@ -5302,8 +5303,9 @@ img.nwsImg
                              Home 7
 *****************************************************************************************/
 .home7 .ftr-section{
-     background: url(../images/home7-images/footer-bg.jpg) no-repeat center center;
+     /* background: url(../images/home7-images/footer-bg.jpg) no-repeat center center; */
      background-size:cover;
+     background-color: #000;
 }
 .home7 .ftr-section p,.home7 ul.footer-link li a,.home7 .ftr-section h6,.home7 .ftr-section p a{
      color: #ccc;
