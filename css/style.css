@@ -1898,6 +1898,7 @@ ul.header-info li.address{
  .history-list{
      margin-bottom:93px;
      position:relative;
+     padding-top: 137px;
 }
  .history-list:before{
      width:100%;
