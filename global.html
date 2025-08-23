@@ -1,23 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-      <title>Indofact</title>
-      <!-- Bootstrap -->
-      <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/style.css" rel="stylesheet">
-      <link href="css/responsive-style.css" rel="stylesheet">
-      <link href="css/effect_style.css" rel="stylesheet">
-      <link rel="stylesheet" href="css/animate.min.css">
-      <link rel="stylesheet" href="css/animate.css">
-        <link rel="shortcut icon" href="imgs/fav.png" type="image/x-icon">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indofact</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="css/responsive-style.css" rel="stylesheet">
+  <link href="css/effect_style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="shortcut icon" href="imgs/fav.png" type="image/x-icon">
+
+  <!-- jqvmap -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/jqvmap.min.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- jqvmap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/jquery.vmap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/maps/jquery.vmap.world.js"></script>
+
+  <style>
+    .map-wrapper {
+      width: 100%;
+      height: 100vh; /* full screen height */
+      background: linear-gradient(to right, #c31432, #240b36); /* red → purple gradient */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #vmap {
+      width: 90%;
+      height: 90%;
+      border-radius: 20px;
+      overflow: hidden;
+      
+    }
+       /* Style zoom buttons inside #vmap */
+#vmap .jqvmap-zoomin,
+#vmap .jqvmap-zoomout {
+  position: absolute !important;
+  right: 20px !important;
+  background: #ffffff !important;
+  color: #333 !important;
+  font-size: 30px !important;
+  font-weight: bold !important;
+  width: 45px !important;
+  height: 45px !important;
+  line-height: 39px !important;
+  text-align: center !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25) !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease-in-out !important;
+  z-index: 1000 !important;
+  border: 2px solid #eee !important;
+}
+
+/* Hover / active effect */
+#vmap .jqvmap-zoomin:hover,
+#vmap .jqvmap-zoomout:hover {
+  background: #ffb400 !important;
+  color: #fff !important;
+  transform: scale(1.12) !important;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3) !important;
+}
+
+/* Positioning - stack them vertically */
+#vmap .jqvmap-zoomin {
+  bottom: 80px !important; /* 👈 higher */
+}
+
+#vmap .jqvmap-zoomout {
+  margin-top: 30px !important; /* 👈 space between buttons */
+}
+
+  </style>
    </head>
    <body>
       <!--=========header start============-->
-     <header class="header4 header7">
+      <header class="header4 header7">
          <div class="hdr-top-bar">
             <div class="container-fluid">
             <ul class="header-info">
@@ -122,75 +189,24 @@
       <div class="inner-pages-bnr">
          <img src="images/contact-banner.jpg" class="img-responsive" alt="contact-banner-image">
          <div class="banner-caption">
-            <h1>Contact Us</h1>
+            <h1>Welcome to India International House Ltd.</h1>
             <ul class="breadcumb">
                <li><a href="#">Home</a> - </li>
-               <li>Contact Us</li>
+               <li>Global Presence</li>
             </ul>
          </div>
       </div>
       <!--=========Banner end============-->
       <!--=========Contact Section Start============-->
-      <section class="pad100-top-bottom">
-         <div class="container">
-            <div class="row contact-us-top">
-               <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 contact-info-column text-center">
-                  <img src="images/contact-address-icon.png" alt="address-icon">
-                  <h4>Location</h4>
-                  <p class="fnt-17">STC Local Shopping Complex,
-Navjiwan Vihar, New Delhi, India
-</p>
-               </div>
-               <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12  contact-info-column text-center ">
-                  <img src="images/contact-phn-icon.png" alt="phone-icon">
-                  <h4>Phone</h4>
-                  <p class="fnt-17"><a href="tel:++911126691550" style="color: #575757;">+91 1126691550</a></p>
-                  <p class="fnt-17" style="opacity: 0;">+91-9811036192</p>
-               </div>
-               <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12  contact-info-column text-center">
-                  <img src="images/contact-msg-icon.png" alt="message-icon">
-                  <h4>Email</h4>
-                  <p class="fnt-17"><a href="mailto:arhaan@skggroup.com" style="color: #575757;">arhaan@skggroup.com</a></p>
-                   <p class="fnt-17" style="opacity: 0;" >arhaan@skggroup.com</p>
-               </div>
-            </div>
-            <div class="row text-center contac-form-section">
-               <h3 class="mar-btm30">Leave us your info</h3>
-               <p class="fnt-18">and we will get back to you.</p>
-               <div class="contact-form">
-                  <div class="col-md-6 form-field input-halfrght">
-                     <input name="name" type="text" class="form-input" placeholder="Full Name*">
-                  </div>
-                  <div class="col-md-6 form-field input-halflft">
-                     <input name="name" type="text" class="form-input" placeholder="Email*">
-                  </div>
-                  <div class="col-lg-12 col-md-12 form-field">
-                     <input name="name" type="number" class="form-input" placeholder="Phone Number*">
-                  </div>
-                  <div class="col-lg-12 col-md-12 form-field">
-                     <textarea name="name" cols="1" rows="2" class="form-comment" placeholder="Comment*"></textarea>
-                  </div>
-                  <div class="col-md-12 form-field no-margin">
-                     <input name="name" type="button" class="form-submit-btn" value="Submit Now">
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <div class="contact_map">
-        <iframe
-  width="600"
-  height="450"
-  style="border:0"
-  loading="lazy"
-  allowfullscreen
-  referrerpolicy="no-referrer-when-downgrade"
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.123456789012!2d77.20745!3d28.53180!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce24c00abcdef%3A0x123456789abcdef0!2sMMTC%20STC%20Colony%2C%20Local%20Shopping%20Complex%2C%20Navjeevan%20Vihar%2C%20New%20Delhi%2C%20Delhi%20110017%2C%20India!5e0!3m2!1sen!2sus!4v1692230400000"
-></iframe>
-      </div>
+
+   <div class="map-wrapper">
+    <div id="vmap"></div>
+  </div>
+     
+
       <!--=========Contact Section end============-->
       <!--=========Footer Start============-->
-         <footer>
+       <footer>
          <!-- <div class="yellow-background solution-available text-center">
             <div class="container">
                <h5>For Any Solution We Are <span>Available</span> For You</h5>
@@ -262,12 +278,35 @@ Navjiwan Vihar, New Delhi, India
             </div>
          </div>
       </div>
+
+
+
+        <script>
+    $(function(){
+      $('#vmap').vectorMap({
+        map: 'world_en',
+        backgroundColor: 'transparent',
+        borderColor: '#666',
+        borderOpacity: 0.5,
+        borderWidth: 0.5,
+        color: '#b19cd9',         // default country color
+        hoverColor: '#fff',    // gold hover
+        selectedColor: '#ffb400', // yellow/orange selected
+        enableZoom: true,
+        showTooltip: true,
+        selectedRegions: [
+          "US", "CA", "GB", "IE", "DE", "FR", "NL",
+          "SE", "NO", "DK", "IN", "AU", "NZ"
+        ]
+      });
+    });
+  </script>
+
+
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-   <script src="js/jquery.min.js"></script> 
+
    <!-- Include all compiled plugins (below), or include individual files as needed --> 
    <script src="js/bootstrap.min.js"></script> 
-   <script src="js/custom.js"></script>
-   <script src="js/theme.js"></script>
-   <script src="js/slick.js"></script>
+   
     </body>
 </html>
