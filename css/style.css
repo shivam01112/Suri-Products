@@ -10770,7 +10770,7 @@ a.view-all.slide_learn_btn.view_project_btn:hover{
 
 .content > h2:first-child {
 	padding-top: 0em;
-    background-color: tr;
+    background-color: transparent;
 }
 
 /* Header */
