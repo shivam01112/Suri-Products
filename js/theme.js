@@ -232,14 +232,6 @@ function testiCarousel() {
 } */
 
 //Drop downs
-jQuery('ul i.fa').on('click', function() {
-	jQuery(this).toggleClass('DDopen');
-	jQuery(this).closest('ul').find('ul').removeClass('opened');
-	jQuery(this).parent().find('> ul').addClass('opened');
-	jQuery(this).closest('ul').find('ul').not('.opened').slideUp(350);
-	jQuery(this).parent().find('> ul').slideToggle(350);
-	jQuery(this).closest('ul').find('i.fa').not(this).removeClass('DDopen');
-});
 
 
 

@@ -32,6 +32,24 @@
 /*=====================*/
 	/* 8 - LIGHT-BOX */
 	/*=====================*/
+   
+$(document).ready(function(){
+  // Disable Bootstrap's default dropdown close on chevron click
+  $('#main-navigation-wrapper .nav > li > i.fa').on('click', function(e){
+    e.preventDefault();
+    e.stopPropagation(); // stop event from closing dropdown immediately
+    
+    var parentLi = $(this).closest('li');
+    
+    // Toggle current
+    parentLi.toggleClass('open');
+    
+    // Close other open dropdowns
+    parentLi.siblings().removeClass('open');
+  });
+});
+
+
 	
 	/*activity indicator functions*/
 	var activityIndicatorOn = function(){
@@ -558,14 +576,7 @@ function testiCarousel() {
 }
 
 //Drop downs
-jQuery('ul i.fa').on('click', function() {
-	jQuery(this).toggleClass('DDopen');
-	jQuery(this).closest('ul').find('ul').removeClass('opened');
-	jQuery(this).parent().find('> ul').addClass('opened');
-	jQuery(this).closest('ul').find('ul').not('.opened').slideUp(350);
-	jQuery(this).parent().find('> ul').slideToggle(350);
-	jQuery(this).closest('ul').find('i.fa').not(this).removeClass('DDopen');
-});
+
 
 // instance of fuction while Document ready event   
 jQuery(document).on('ready', function() {

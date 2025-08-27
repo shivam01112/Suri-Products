@@ -34,15 +34,9 @@
 	        border-radius: 4px;
 }
 
-.fancybox-opened {
-	z-index: 8030;
-}
 
-.fancybox-opened .fancybox-skin {
-	-webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-	   -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-	        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-}
+
+
 
 .fancybox-outer, .fancybox-inner {
 	position: relative;
@@ -206,9 +200,7 @@
 	z-index: 8050;
 }
 
-.fancybox-opened .fancybox-title {
-	visibility: visible;
-}
+
 
 .fancybox-title-float-wrap {
 	position: absolute;

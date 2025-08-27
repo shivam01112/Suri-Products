@@ -716,9 +716,7 @@
          right: 9px;
          padding: 13px 16px;
     }
-	ul.dropdown-submenu.opened li i {
-    color: #000;
-  }
+	
 }
  @media only screen and (min-width: 768px) and (max-width: 991px) {
      .display-block{

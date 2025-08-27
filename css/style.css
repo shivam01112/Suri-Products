@@ -7408,9 +7408,7 @@ section.experienceSec{
          right: 9px;
          padding: 13px 16px;
     }
-	ul.dropdown-submenu.opened li i {
-    color: #000;
-  }
+	
 }
  @media only screen and (min-width: 768px) and (max-width: 991px) {
      .display-block{
@@ -12879,6 +12877,46 @@ body{
     z-index: 0;
     display: none !important;
 }
+.supportTextCol p {
+    font-weight: normal;
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 19px;
+    line-height: normal;
+    text-align: left;
+}
+.certification-list-items li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #fff;
+    text-align: start;
+}
+ #main-navigation-wrapper .dropdown-submenu {
+    display: none;
+    position: static;
+    float: none;
+    width: 100%;
+    background: #fff;
+    border: none;
+    box-shadow: none;
+  }
+
+  /* Show submenu when li has 'open' */
+  #main-navigation-wrapper .dropdown.open > .dropdown-submenu {
+    display: block;
+  }
+
+  /* Nav link styling */
+  #main-navigation-wrapper .navbar-nav > li > a {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    color: #333 !important;
+  }
+
+  
+ 
 
 }
 .demo3SupportSection .row {
@@ -13015,4 +13053,34 @@ body{
 .certification-list-img img{
     border-radius: 12px;
     object-fit: fill;
+}
+
+
+.manufacturing-info {
+    font-size: 18px;
+    line-height: 1.7;
+    color:#fff;
+    font-weight: 700 !important;
+   
+}
+
+/* Input with icon wrapper */
+.input-icon {
+  position: relative;
+}
+
+/* Icons inside input */
+.input-icon i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+/* Add padding so text doesn’t overlap the icon */
+.input-icon .form-control {
+  padding-left: 35px;
 }
