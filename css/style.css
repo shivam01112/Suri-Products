@@ -7074,7 +7074,7 @@ section.experienceSec{
      #main-navigation-wrapper .navbar-collapse {
          border-color: #232333;
          border-radius: 0px;
-         background: #f2ae2b;
+         background: #ffffffff;
          text-align:center;
     }
      .navbar-nav {
@@ -11378,10 +11378,9 @@ margin-top: 12px;}
     background-color: #152460;
     min-height: 19rem;
     max-width: 55rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex
-;
+    /* display: -webkit-box; */
+    /* display: -ms-flexbox;
+    display: flex; */
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -12709,7 +12708,7 @@ padding-left: 30px;
         z-index: 2;
         line-height: 47px;
         font-size: 50px;
-        font-weight: 700;
+        font-weight: bolder;
         font-family: 'Poppins', sans-serif;
         color: #fff;
         margin-bottom: 12px;
@@ -12742,9 +12741,145 @@ padding-left: 30px;
   .supportVideoCol{
     order: 1;
   }
-  .step-inner-text {
-     padding: 15px !important;
+  .step-inner-text p {
+    color: #fff;
+    font-size: 16px;
+    margin-top: 22px;
+    line-height: 24px;
+}
+      header.header4 #main-navigation-wrapper .nav > li {
+        padding: 0px;
+        background: #29166f;
+    }
+        .header7 i.fa.fa-chevron-down, header.header4.header7 #main-navigation-wrapper .nav>li>a {
+        color: #fff8f8 !important;
+    }
+     #main-navigation {
+    background: #fff; /* keep white background */
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
   }
+
+  /* Nav links full width */
+  #main-navigation-wrapper .navbar-nav > li {
+    float: none;
+    width: 100%;
+  }
+
+  #main-navigation-wrapper .navbar-nav > li > a {
+    padding: 12px 15px;
+    color: #333 !important; /* fix faint text */
+    display: block;
+    width: 100%;
+  }
+
+  /* Dropdowns behave as accordion */
+  #main-navigation-wrapper .dropdown-submenu {
+    position: static;
+    border: none;
+    box-shadow: none;
+    display: none; /* collapsed by default */
+  }
+
+  #main-navigation-wrapper .dropdown.open > .dropdown-submenu {
+    display: block;
+    padding-left: 15px;
+  }
+
+  /* Chevron icons inline */
+    header.header4.header7 #main-navigation-wrapper .nav>li>a.active, .header7 i.fa.fa-chevron-down.active {
+        color: #fff;
+        background: #c86c24 !important;
+    }
+      .process-step {
+        background-size: cover;
+        color: #fff;
+        padding: 29px 0px 0px 0px;
+        height: 107vh;
+    }
+.side-line-container {
+    width: 81px;
+    height: 605px;
+    background-color: #c86c24;
+    margin-right: 9px;
+}
+    .paddingSection {
+        padding: 38px 0 !important;
+    }
+    .bottomdemoproduct::after {
+    width: 0vw !important;
+    max-width: 100%;
+    min-height: 85rem;
+    z-index: 0;
+}
+    .supportTextCol h1, .home7Title h1 {
+        font-size: 30px;
+        line-height: 33px;
+        text-align: justify;
+    }
+    .bottom-sec-section .container {
+    background-color: #fff;
+    padding: 40px 0px;
+}
+.img-height{
+    height: 300px !important;
+}
+.mobile-view{
+    padding: 30px 0px 0px 0px !important;
+}
+.home7Services .home7Title h1 {
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: start;
+}
+.ftr-about-text img {
+    width: 250px;
+    margin-bottom: 25px;
+    /* background: #fff; */
+    padding: 0px;
+    border-radius: 12px;
+}
+    .ftr-section {
+        padding: 43px 3px 0 !important;
+    }
+.bottomdemoproduct-1 ul li {
+    text-align: start;
+}
+    .supportTextCol h1, .home7Title h1 {
+        font-size: 30px;
+        line-height: 30px;
+        text-align: start;
+    }
+
+    .demo3TeamTitle {
+        bottom: -10px !important;
+    }
+.process-step h2 {
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+body{
+    overflow-x: hidden !important;
+}
+.step-heading p {
+    font-size: 20px !important;
+   }
+   .about-section .abt-content::before {
+    position: absolute;
+    content: "";
+    top: 24%;
+    left: 0;
+    width: 650px;
+    height: 300px;
+    background: #29166f;
+    z-index: 0;
+    display: none !important;
+}
+
 }
 .demo3SupportSection .row {
   display: block !important; /* reset flex to default */
@@ -12857,4 +12992,27 @@ padding-left: 30px;
     color: #fff;
     padding-left: 1px;
 
+}
+
+.sertified-section{
+    padding: 50px;
+    background-color: #002366 !important;
+}
+
+.certification-list-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.certification-list-items li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.7;
+    color:#fff;
+}
+
+.certification-list-img img{
+    border-radius: 12px;
+    object-fit: fill;
 }
