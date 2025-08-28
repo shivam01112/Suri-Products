@@ -32,6 +32,22 @@
 /*=====================*/
 	/* 8 - LIGHT-BOX */
 	/*=====================*/
+
+  const scrollBtn = document.getElementById("scrollBtn");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > window.innerHeight) {
+        scrollBtn.style.display = "flex"; // Show button
+      } else {
+        scrollBtn.style.display = "none"; // Hide button
+      }
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+
    
 $(document).ready(function(){
   // Disable Bootstrap's default dropdown close on chevron click
