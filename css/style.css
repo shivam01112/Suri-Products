@@ -7622,6 +7622,8 @@ section.experienceSec{
      .row{
         margin:0
     }
+
+    
      .static-section.home4-static-section {
          padding: 0px!important;
     }
@@ -11442,7 +11444,7 @@ margin-top: 12px;}
 }
 .chairman-msg{
     background-color: #29166f;
-    padding: 70px 30px;
+    padding: 50px 30px;
 }
 .chairman-msg-row{
     display: flex;
@@ -12166,7 +12168,7 @@ width: 200px;
 }
 
 .my-related-header {
-  background: #003580;
+  background: #29166f;
   color: #fff;
   font-size: 32px;
   font-weight: 600;
@@ -12187,7 +12189,7 @@ width: 200px;
 
 .my-related-btn {
   display: block;
-  background: #003580;
+  background: #29166f;
   color: #fff !important;
   text-transform: uppercase;
   font-weight: bold;
@@ -12620,16 +12622,7 @@ padding-left: 30px;
     flex-direction: column;
     background-color: #000;
 }
-.about-section .abt-content::before {
-   position: absolute;
-    content: "";
-    top: 24%;
-    left: 0;
-    width: 650px;
-    height: 300px;
-    background: #29166f;
-    z-index: 0;    
-}
+
 
 .choose-list-sec li img{
     width: 22px;
@@ -12680,7 +12673,198 @@ padding-left: 30px;
   z-index: 99;
 }
 
-@media screen and (max-width: 578px) {
+
+.demo3SupportSection .row {
+  display: block !important; /* reset flex to default */
+}
+
+/* Custom Card Section */
+.new-card-design {
+   padding: 0px 0px 60px 0px;
+   /* background-image: url('../imgs/bg-4.webp'); */
+   background-color:#fff;
+}
+
+/* Card Style */
+.custom-card {
+  background:#f4e4e200;
+  border: 1px solid #8c878787;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+
+}
+
+
+.custom-card-img{
+  padding: 15px 18px 8px 18px;
+
+}
+
+.custom-card-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+.custom-card-body {
+  padding: 15px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  background-color: #29166f;
+  text-align: center;
+}
+.custom-card-body h2 a ,.custom-card-body h2{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.privacy-section {
+     color: #0d1a4a;
+    padding: 50px 0;
+    background: #f4f4f4;
+    padding: 33px;
+    border-radius: 12px;
+    margin: 70px auto;
+}
+
+.privacy-block {
+  margin-bottom: 40px;
+}
+
+.privacy-heading {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  color: #0d1a4a;
+  padding-left: 15px;
+  border-left: 8px solid #0d1a4a;
+}
+
+.privacy-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #0d1a4a;
+  margin: 0;
+      margin-left: 23px;
+}
+
+.privacy-list {
+  list-style-type: auto;
+  padding-left: 30px;
+  margin: 0;
+}
+
+.privacy-list li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #0d1a4a;
+}
+.space-top{
+    margin-top: 30px;
+}
+
+.privacy-text-subheading{
+   font-size: 17px;
+    color: #000;
+    line-height: normal;
+    margin-bottom: 21px;
+    margin-left: 23px;
+}
+.step-heading p{
+    font-size: 25px;
+    color: #fff;
+    padding-left: 1px;
+
+}
+
+.sertified-section{
+    padding: 50px;
+    background-color: #002366 !important;
+}
+
+.certification-list-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.certification-list-items li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.7;
+    color:#fff;
+}
+
+.certification-list-img img{
+    border-radius: 12px;
+    object-fit: fill;
+}
+
+
+.manufacturing-info {
+    font-size: 18px;
+    line-height: 1.7;
+    color:#fff;
+    font-weight: 700 !important;
+   
+}
+
+/* Input with icon wrapper */
+.input-icon {
+  position: relative;
+}
+
+/* Icons inside input */
+.input-icon i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+/* Add padding so text doesn’t overlap the icon */
+.input-icon .form-control {
+  padding-left: 35px;
+}
+
+ #scrollBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 3px solid #ffffff;
+      background: transparent;
+      color: #ffffff;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    #scrollBtn:hover {
+      background: #ffffff;
+      color: #333;
+    }
+
+
+    @media screen and (max-width: 578px) {
 
         .hdr-top-bar {
         display: none;
@@ -12914,194 +13098,127 @@ body{
   }
 
   
- 
-
+     .header7 .navbar-header {
+        background: #ffffff00 !important;
+        top: 0;
+        margin-top: -39px !important;
+    }
+    .inner-pages-bnr img {
+      height: 180px !important;
+      
+    }
+    .inner-pages-bnr h1 {
+    font-size: 25px !important;
+    color: #fff !important;
+    text-transform: none;
+   margin-bottom: 0px;
+    padding-top: 41px;
 }
-.demo3SupportSection .row {
-  display: block !important; /* reset flex to default */
-}
+  .about-section h3 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
 
-/* Custom Card Section */
-.new-card-design {
-   padding: 0px 0px 60px 0px;
-   /* background-image: url('../imgs/bg-4.webp'); */
-   background-color:#fff;
-}
-
-/* Card Style */
-.custom-card {
-  background:#f4e4e200;
-  border: 1px solid #8c878787;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-  overflow: hidden;
-  margin-bottom: 20px;
-  transition: all 0.3s ease;
-  border-radius: 12px;
-
-}
-
-
-.custom-card-img{
-  padding: 15px 18px 8px 18px;
-
-}
-
-.custom-card-img img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 5px;
-}
-
-.custom-card-body {
-  padding: 15px;
-  font-size: 14px;
-  color: #555;
-  line-height: 1.6;
-  background-color: #29166f;
-  text-align: center;
-}
-.custom-card-body h2 a ,.custom-card-body h2{
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    margin-bottom: 0px;
-}
-
-.privacy-section {
-     color: #0d1a4a;
-    padding: 50px 0;
-    background: #f4f4f4;
-    padding: 33px;
-    border-radius: 12px;
-    margin: 70px auto;
-}
-
-.privacy-block {
-  margin-bottom: 40px;
-}
-
-.privacy-heading {
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0 0 15px 0;
-  color: #0d1a4a;
-  padding-left: 15px;
-  border-left: 8px solid #0d1a4a;
-}
-
-.privacy-text {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #0d1a4a;
-  margin: 0;
-      margin-left: 23px;
-}
-
-.privacy-list {
-  list-style-type: auto;
-  padding-left: 30px;
-  margin: 0;
-}
-
-.privacy-list li {
-  margin-bottom: 10px;
-  font-size: 15px;
-  line-height: 1.7;
-  color: #0d1a4a;
-}
-.space-top{
-    margin-top: 30px;
-}
-
-.privacy-text-subheading{
-   font-size: 17px;
-    color: #000;
-    line-height: normal;
-    margin-bottom: 21px;
-    margin-left: 23px;
-}
-.step-heading p{
-    font-size: 25px;
-    color: #fff;
-    padding-left: 1px;
-
-}
-
-.sertified-section{
-    padding: 50px;
-    background-color: #002366 !important;
-}
-
-.certification-list-items {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.certification-list-items li {
-    margin-bottom: 10px;
+  .about-section p {
+    text-align: center;
     font-size: 15px;
-    line-height: 1.7;
-    color:#fff;
+    line-height: 1.6;
+    padding: 0 15px; /* breathing space on small screens */
+  }
+
+  .about-section img {
+    max-width: 80%; /* shrink a bit on small screens */
+  }
+  .mobile-view-con{
+    display: none !important;
+  }
+
+
+   .mobile-view-about{
+    padding: 30px 0px 2px 1px !important;
+  }
+
+  
+  .mobile-view-ee {
+    background-color: #29166f !important;
+}
+    .chairman-msg-row {
+    display: block;
+  }
+
+  .chairman-msg {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  .chairman-msg img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .hight-level-section h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .hight-level-section p,
+  .hight-level-section li {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: left;
+    padding: 0 15px;
+  }
+
+  .choose-list-sec img {
+    width: 18px;
+    margin-right: 8px;
+  }
+  .chairman-msg {
+    /* background-color: #29166f; */
+    padding: 34px 7px;
+}
+.hight-level-section{
+    background-color: #000 !important;
+}
+}
+.about-section {
+  padding: 40px 0;
 }
 
-.certification-list-img img{
-    border-radius: 12px;
-    object-fit: fill;
+.about-section img {
+  margin-bottom: 20px;}
+
+  .hight-level-section {
+  padding: 40px 0 !important;
 }
 
+.chairman-msg img {
+  width: 100%;
 
-.manufacturing-info {
-    font-size: 18px;
-    line-height: 1.7;
-    color:#fff;
-    font-weight: 700 !important;
-   
+  display: block;
 }
 
-/* Input with icon wrapper */
-.input-icon {
-  position: relative;
+    @media (max-width: 767px) {
+  .contact-us-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-info-column {
+    width: 90%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .contact-info-column img {
+    margin-bottom: 10px;
+    width: 60px;
+    height: auto;
+  }
+  .contact-info-column h4 {
+    font-size: 20px;
+  }
+  .contact-info-column p {
+    font-size: 16px;
+  }
 }
-
-/* Icons inside input */
-.input-icon i {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #999;
-  font-size: 14px;
-  pointer-events: none;
-}
-
-/* Add padding so text doesn’t overlap the icon */
-.input-icon .form-control {
-  padding-left: 35px;
-}
-
- #scrollBtn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 3px solid #ffffff;
-      background: transparent;
-      color: #ffffff;
-      font-size: 20px;
-      cursor: pointer;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-    }
-
-    #scrollBtn:hover {
-      background: #ffffff;
-      color: #333;
-    }
