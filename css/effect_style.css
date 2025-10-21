@@ -414,12 +414,12 @@ ul.filter > li > a {
 	border-bottom: 2px solid transparent;
 }
 ul.filter > li > a:hover, ul.filter > li > a:focus {
-	border-bottom: 2px solid #f2ae2b;
-	color:#f2ae2b;
+	border-bottom: 2px solid #505457;
+	color:#505457;
 }
 ul.filter > li.active a {
-	color:#f2ae2b;
-	border-bottom: 2px solid #f2ae2b;
+	color:#505457;
+	border-bottom: 2px solid #505457;
 }
 ul.filter > li span {
 	color:#ddd;
@@ -670,7 +670,7 @@ a.view-all.slide_learn_btn.view_project_btn {
 	line-height:43px;
 	font-family: 'Montserrat', sans-serif;
 	margin:86px 0px 74px;
-	background:#f2ae2b;
+	background:#505457;
 	color: #0e0e0e;
     font-weight: 600;
     letter-spacing: 0.50px;
