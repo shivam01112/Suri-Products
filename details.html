@@ -66,17 +66,12 @@
                         <li class="dropdown">
                            <a href="products.html">Our Products</a><i class="fa fa-chevron-down"></i>
                      <ul class="dropdown-submenu">
-                              <!-- <li>
-                                 <a href="manufacturing.html">Manufacturing</a>
-                                 <ul class="dropdown-submenu second_submenu">
-                                    <li>
-                                       <a href="#">Second Level Menu</a><i class="fa fa-chevron-down"></i>
-                                       <ul class="dropdown-submenu third_submenu">
-                                          <li><a href="#">Third Level Menu</a></li>
-                                       </ul>
-                                    </li>
-                                 </ul>
-                              </li> -->
+                            <li>
+                                 <a href="products.html">Furniture</a>
+                                 <a href="products.html">Electronics</a>
+                                 <a href="products.html">Fashion</a>
+                                  <a href="products.html">others</a>
+                               </li> 
                                   <!-- <li><a href="architectural-hardware.html"> Architectural Hardware</a></li>
                                  <li><a href="">Bathroom Hardware</a></li>
                                   <li><a href="">Specialty Hardware</a></li>      
@@ -98,6 +93,8 @@
                        
                         
                        
+                         <li><a href="career.html">Career</a></li>
+                         <li><a href="Catalogs.html">Catalogs</a></li>                       
                         <li><a href="contact.html">contact us</a></li>
                         
                      </ul>
@@ -131,8 +128,24 @@
     <!-- Product Image -->
     <div class="col-sm-5 my-product-info">
       <div class="my-product-imgbox">
-        <img src="main-imgs/d-1.jpg" alt="Product" class="img-responsive" id="main-image">
-          <div id="zoom-result"></div>
+        <img src="main-imgs/m-1.jpg" alt="Product" class="img-responsive" id="main-image">
+        <div id="zoom-result"></div>
+      </div>
+      <div class="product-thumbnails" style="margin-top: 15px;">
+        <div class="row">
+          <div class="col-xs-3">
+            <img src="main-imgs/m-1.jpg" alt="Thumbnail 1" class="img-responsive thumbnail-img active" onclick="changeImage(this)">
+          </div>
+          <div class="col-xs-3">
+            <img src="main-imgs/m-3.jpg" alt="Thumbnail 2" class="img-responsive thumbnail-img" onclick="changeImage(this)">
+          </div>
+          <div class="col-xs-3">
+            <img src="main-imgs/m-2.jpg" alt="Thumbnail 3" class="img-responsive thumbnail-img" onclick="changeImage(this)">
+          </div>
+          <div class="col-xs-3">
+            <img src="main-imgs/m-last.jpg" alt="Thumbnail 4" class="img-responsive thumbnail-img" onclick="changeImage(this)">
+          </div>
+        </div>
       </div>
     </div>
 
@@ -172,9 +185,7 @@
     </div>
 
     <!-- Button -->
-    <a href="#" class="btn my-inquiry-btn" data-toggle="modal" data-target="#inquiryModal">
-        SEND INQUIRY
-    </a>
+   <a data-animation="animated fadeInUp" href="#" style="margin-top: 30px;" class="header-requestbtn learn-more hvr-bounce-to-right">SEND INQUIRY</a>
 </div>
 
   </div>
@@ -381,30 +392,81 @@
    <script src="js/slick.js"></script>
 
 
+   <style>
+    .my-product-imgbox {
+      border: 1px solid #eee;
+      padding: 10px;
+      border-radius: 4px;
+      background: #fff;
+      position: relative;
+    }
+    .thumbnail-img {
+      border: 2px solid transparent;
+      padding: 3px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .thumbnail-img:hover {
+      border-color: #ddd;
+    }
+    .thumbnail-img.active {
+      border-color: #505457;
+    }
+    #zoom-result {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 300px;
+      height: 300px;
+      border: 1px solid #ccc;
+      display: none;
+      background-repeat: no-repeat;
+      background-size: 800%;
+      z-index: 1000;
+      margin-left: 10px;
+    }
+    @media (max-width: 991px) {
+      #zoom-result {
+        display: none !important;
+      }
+    }
+   </style>
+
    <script>
-  const mainImage = document.getElementById("main-image");
-  const zoomResult = document.getElementById("zoom-result");
+    const mainImage = document.getElementById("main-image");
+    const zoomResult = document.getElementById("zoom-result");
 
-  mainImage.addEventListener("mouseenter", () => {
-    zoomResult.style.display = "block";
-  });
+    // Zoom functionality
+    mainImage.addEventListener("mouseenter", () => {
+      zoomResult.style.display = "block";
+    });
 
-  mainImage.addEventListener("mouseleave", () => {
-    zoomResult.style.display = "none";
-  });
+    mainImage.addEventListener("mouseleave", () => {
+      zoomResult.style.display = "none";
+    });
 
-  mainImage.addEventListener("mousemove", function(e) {
-    let rect = mainImage.getBoundingClientRect();
-    let x = e.pageX - rect.left - window.scrollX;
-    let y = e.pageY - rect.top - window.scrollY;
+    mainImage.addEventListener("mousemove", function(e) {
+      let rect = mainImage.getBoundingClientRect();
+      let x = e.pageX - rect.left - window.scrollX;
+      let y = e.pageY - rect.top - window.scrollY;
 
-    let xPercent = (x / mainImage.width) * 100;
-    let yPercent = (y / mainImage.height) * 100;
+      let xPercent = (x / mainImage.width) * 100;
+      let yPercent = (y / mainImage.height) * 100;
 
-    zoomResult.style.backgroundImage = `url('${mainImage.src}')`;
-    zoomResult.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
-  });
-</script>
+      zoomResult.style.backgroundImage = `url('${mainImage.src}')`;
+      zoomResult.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
+    });
+
+    // Thumbnail gallery functionality
+    function changeImage(element) {
+      mainImage.src = element.src;
+      // Update active state
+      document.querySelectorAll('.thumbnail-img').forEach(thumb => {
+        thumb.classList.remove('active');
+      });
+      element.classList.add('active');
+    }
+   </script>
 
     </body>
 </html>
