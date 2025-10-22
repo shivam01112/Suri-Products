@@ -219,29 +219,38 @@ jQuery(document).on('ready', function () {
 })(jQuery);
 
 //
- $('.static-section ul li h2').each(function () {
-        $(this).prop('Counter',0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 250000,
-            easing: 'swing',
-            step: function (now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
+// Initialize counter function
+function startCounter(element) {
+    const target = parseInt($(element).text());
+    $(element).prop('Counter', 0).animate({
+        Counter: target
+    }, {
+        duration: 3000,
+        easing: 'swing',
+        step: function(now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+}
+
+// Create intersection observer for counter animation
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            $('.static-section ul li h2').each(function() {
+                startCounter(this);
+            });
+            observer.unobserve(entry.target); // Only run animation once
+        }
+    });
+}, { threshold: 0.5 });
+
+// Observe the statistics section
+$('.static-section').each(function() {
+    observer.observe(this);
 });
 	 
- $('.counter').each(function () {
-        $(this).prop('Counter',0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 50000,
-            easing: 'swing',
-            step: function (now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
-}); 
+ // Counter animation is now handled by the Intersection Observer above 
 $(window).scroll(function() {
         if ($(this).scrollTop() > 120){  
         $('#main-navigation-wrapper').removeClass('slideIn animated');
